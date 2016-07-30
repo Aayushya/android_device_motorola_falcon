@@ -82,7 +82,6 @@ void vendor_load_properties()
     char radio[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char fstype[92];
-    char value[PROP_VALUE_MAX];
     int rc;
 
     rc = property_get("ro.board.platform", platform);
@@ -205,11 +204,4 @@ void vendor_load_properties()
 
     property_get("ro.product.device", device);
     INFO("Found radio id: %s data %s setting build properties for %s device\n", radio, fstype, device);
-
-    rc = property_get("ro.boot.llcon", value);
-    if (rc > 0) {
-        if (value[0] != '0')
-            property_set("debug.sf.nobootanimation", "1");
-            INFO("Found LLCON\n");
-    }
 }
