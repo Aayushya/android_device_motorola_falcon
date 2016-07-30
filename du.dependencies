@@ -1,7 +1,0 @@
-[
-  {
-    "repository": "DirtyUnicorns/android_external_connectivity",
-    "target_path": "external/connectivity",
-    "branch":      "m-caf"
-  }
-]
